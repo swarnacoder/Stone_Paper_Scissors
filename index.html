@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stone Paper Scissors</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+  </head>
+  <body>
+    
+    <div class="container">
+      <!-- ************** UPPER SCORE BOX *********** -->
+      <div class="box">
+        <div class="game">
+          <p>
+            ROCK
+            <br />PAPERS <br />SCISSORS
+          </p>
+        </div>
+        <div class="computer score">
+          <p>
+            COMPUTER
+            <br />
+            SCORE
+          </p>
+          <span id="computer-number">0</span>
+        </div>
+        
+        <div class="your score">
+          <p>
+            YOUR
+            <br />
+            SCORE
+          </p>
+          <span id="your-number">0</span>
+        </div>
+      </div>
+      
+<!-- ************** TRIANGLE WITH ICONS *********** -->
+      <div id="gameicon">
+        <div class="lines">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+
+        <div class="images">
+          <div class="rock-div icon" id="rock" onclick="makeChoices('rock')">
+            <img src="images/rock.png" alt="rock" width="62px" />
+          </div>
+          <div class="paper-div icon" id="paper" onclick="makeChoices('paper')">
+            <img src="images/paper.png" alt="paper " width="62px" />
+          </div>
+          <div class="scissor-div icon" id="scissor" onclick="makeChoices('scissor')">
+            <img src="images/scissor.png" alt="scissor" width="45px" />
+          </div>
+        </div>
+      </div>
+
+     <!-- *********** RESULT OF COMPUTER AND USER ************ -->
+
+      <div id="resultAll">    
+
+        <div class="color user-box1">
+          <div class="color user-box2">
+            <div class="color user-box3">
+
+              <div class="you-Picked" id="picked-div" >
+                <h3 class="picked">YOU PICKED</h3>
+                <div class="result-image user-result"></div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+
+        <div class="outcome">
+          <p id="result-1"></p>
+          <p id="result-2">AGAINST PC</p>
+          <button class="play-Aagain" id="play-again">play again</button>
+          <button class="play-Aagain" id="replay">replay</button>
+        </div>
+
+        <div class="color pc-box1">
+          <div class="color pc-box2">
+            <div class="color pc-box3">
+
+              <div id="pc-Picked" class="picked-div" >
+                <h3 class="picked">PC PICKED</h3>
+                <div class="result-image pc-result"></div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- *************RULES AND NEXT BTN************  -->
+
+    <div class="button">
+      <button class="btn rulesBtn">RULES</button>
+      <button class="btn nextBtn hurraynext" id="nextButton">NEXT</button>
+    </div>
+
+    <!-- **************GAME RULES AND CROSS SIGN***********  -->
+
+    <div id="game-rules">
+      <div class="cross" id="cross">
+        <i class="fa-solid fa-circle-xmark"></i>
+      </div>
+      <h3>Game Rules</h3>
+      <ul class="points" style="list-style-type: none;">
+        <li>
+          <i class="fa-solid fa-square" style="color: #ebe52d;" >  </i>
+          Rock beats scissors, scissors beat paper, and paper beats rock.
+        </li>
+        <li>
+          <i class="fa-solid fa-square" style="color: #ffd600;"></i>
+          Agree ahead of time whether you’ll count off “rock, paper, scissors,
+          shoot” or just “rock, paper, scissors.”
+        </li>
+        <li>
+          <i class="fa-solid fa-square" style="color: #ffd600;"></i>
+          Use rock, paper, scissors to settle minor decisions or simply play
+          to pass the time
+        </li>
+        <li>
+          <i class="fa-solid fa-square" style="color: #ffd600;"></i>
+          If both players lay down the same hand, each player lays down
+          another hand
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+  <section class="winner">
+   <img src="images/Vector.png" alt="">
+        <img src="images/Star.png" alt="star" id="star1" style="width: 130px; height: 130px;" />
+        <img src="images/Star.png" alt="star" id="star2" style="width: 115px; height: 115px;" />
+        <img src="images/Star.png" alt="star" id="star3" style="width: 103px; height: 103px;"/>
+        <img src="images/Star.png" alt="star" id="star4" style="width: 68px; height: 68px;" />
+        <img src="images/Star.png" alt="star" id="star5" style="width: 32px; height: 32px;"/>
+        <img src="images/Star.png" alt="star" id="star6" style="width: 32px; height: 32px;" />
+        <img src="images/Star.png" alt="star" id="star7" style="width: 32px; height: 32px;"/>
+        <img src="images/Star.png" alt="star" id="star8" style="width: 32px; height: 32px;"/>
+        <h2 class="hurray">HURRAY!!</h2>
+        <h6 class="wonGame">YOU WON THE GAME</h6>
+        <button class="play-Aagain" id="hurrayBtn" onclick="playAgain()">play again</button>
+        <div class="button">
+          <button class="btn rulesBtn">RULES</button>
+        </div>
+  </section>
+
+  <script src="script.js"></script>
+  </body>
+
+</html>
