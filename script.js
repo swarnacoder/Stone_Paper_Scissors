@@ -68,7 +68,7 @@ function computerPicked() {
   return computer[picked];
 }
 function displayImg(picked) {
-  let img = `<img src="./images/${picked}.png" alt=${picked} width="52px"/>`;
+ let img = `<img src="${picked}.png" alt=${picked} width="52px"/>`;
   console.log(picked, 'picked');
   return img;
 }
